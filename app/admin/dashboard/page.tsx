@@ -14,7 +14,6 @@ const supabase = createClient(
 export default function AdminDashboard() {
   const [isMounted, setIsMounted] = useState(false);
 
-  // States
   const [title, setTitle] = useState('');
   const [year, setYear] = useState('2nd Year');
   const [semester, setSemester] = useState('Semester 1');
@@ -41,7 +40,6 @@ export default function AdminDashboard() {
     fetchStats();
   }, []);
 
-  // Handlers required for compilation
   const handleUpload = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!file) return;
@@ -98,7 +96,6 @@ export default function AdminDashboard() {
           <p className="text-slate-400">Manage course materials, import student registries, and trigger WhatsApp broadcasts.</p>
         </div>
 
-        {/* Stats Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="bg-slate-900 border border-slate-800 p-6 rounded-2xl flex items-center justify-between">
             <div>
@@ -120,7 +117,6 @@ export default function AdminDashboard() {
           </div>
         </div>
 
-        {/* Upload Section */}
         <div className="bg-slate-900 border border-slate-800 p-8 rounded-2xl space-y-6">
           <h2 className="text-xl font-semibold flex items-center gap-2">
             <Upload className="w-5 h-5 text-emerald-400" /> Upload Study Material
@@ -194,7 +190,6 @@ export default function AdminDashboard() {
           </form>
         </div>
 
-        {/* Broadcast Section */}
         <div className="bg-slate-900 border border-slate-800 p-8 rounded-2xl space-y-6">
           <h2 className="text-xl font-semibold flex items-center gap-2">
             <MessageSquare className="w-5 h-5 text-teal-400" /> WhatsApp Broadcast
