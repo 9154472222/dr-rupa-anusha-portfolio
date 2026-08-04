@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import { createClient } from '@supabase/supabase-js';
 import { Upload, FileText, CheckCircle, Users, HardDrive, MessageSquare, Loader2, Send, Database } from 'lucide-react';
+export const dynamic = 'force-dynamic';
 
 const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL!,
